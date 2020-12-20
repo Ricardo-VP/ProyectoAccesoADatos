@@ -16,7 +16,7 @@ namespace IUWindowsForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAgregarEstudiante());
+            Application.Run(new frmMenu());
         }
     }
 }

@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Materia.cs" />
+    <Compile Include="MateriaDAO.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="PersonaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

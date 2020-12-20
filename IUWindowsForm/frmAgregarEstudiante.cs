@@ -201,5 +201,10 @@ namespace IUWindowsForm
             txtEstatura.Clear();
             txtPeso.Clear();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

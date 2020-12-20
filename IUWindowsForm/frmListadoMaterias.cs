@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace IUWindowsForm
 {
-    public partial class frmListadoEstudiantes : Form
+    public partial class frmListadoMaterias : Form
     {
-        public frmListadoEstudiantes()
+        public frmListadoMaterias()
         {
             InitializeComponent();
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-            this.dataGridViewEstudiantes.DataSource = CapaDatos.PersonaDAO.GetAll();
+            this.dataGridViewMaterias.DataSource = CapaDatos.MateriaDAO.GetAll();
         }
 
         private void button1_Click(object sender, EventArgs e)

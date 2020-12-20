@@ -52,19 +52,46 @@
     <Compile Include="frmAgregarEstudiante.Designer.cs">
       <DependentUpon>frmAgregarEstudiante.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAgregarMateria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarMateria.Designer.cs">
+      <DependentUpon>frmAgregarMateria.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListadoEstudiantes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmListadoEstudiantes.Designer.cs">
       <DependentUpon>frmListadoEstudiantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmListadoMaterias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadoMaterias.Designer.cs">
+      <DependentUpon>frmListadoMaterias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAgregarEstudiante.resx">
       <DependentUpon>frmAgregarEstudiante.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarMateria.resx">
+      <DependentUpon>frmAgregarMateria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmListadoEstudiantes.resx">
       <DependentUpon>frmListadoEstudiantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListadoMaterias.resx">
+      <DependentUpon>frmListadoMaterias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
