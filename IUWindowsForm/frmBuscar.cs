@@ -40,6 +40,32 @@ namespace IUWindowsForm
             this.txtCedula.Text = p.Cedula;
             this.txtApellidos.Text = p.Apellidos;
             this.txtNombres.Text = p.Nombres;
+            this.txtSexo.Text = p.Sexo;
+            this.txtCorreo.Text = p.Correo;
+            this.txtEstatura.Text = p.Estatura.ToString();
+            this.txtPeso.Text = p.Peso.ToString();
+            this.dtpFechaNacimiento.Enabled = false;
+            this.dtpFechaNacimiento.Value = p.FechaNacimiento;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

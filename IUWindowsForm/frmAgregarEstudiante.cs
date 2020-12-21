@@ -20,6 +20,13 @@ namespace IUWindowsForm
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            //Llamando función de validación de correo electrónico 
+            if (!(ComprobarFormatoEmail(this.txtCorreo.Text)))
+            {
+                MessageBox.Show("Correo electrónico inválido", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtCorreo.Focus();
+                return;
+            }
             try
             {
                 CapaDatos.Persona persona = new CapaDatos.Persona();
@@ -91,13 +98,6 @@ namespace IUWindowsForm
                 return;
             }
 
-            //Llamando función de validación de correo electrónico 
-            if(!(ComprobarFormatoEmail(this.txtCorreo.Text)))
-            {
-                MessageBox.Show("Correo electrónico inválido", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                txtCorreo.Focus();
-                return;
-            }
 
             //Validando combo box vacío de sexo
             if (cmbSex.SelectedIndex == -1)

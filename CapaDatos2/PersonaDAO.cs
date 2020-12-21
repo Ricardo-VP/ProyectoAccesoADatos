@@ -138,7 +138,7 @@ namespace CapaDatos
 
             //sql (lenguaje estructurado de consultas)
 
-            string sql = "select cedula, apellidos, nombres, sexo, fechaNacimiento, Correo, Estatura, Peso " +
+            string sql = "select cedula, apellidos, nombres, case when sexo='M' then 'Masculino' else 'Femenino' end as Sexo, fechaNacimiento, Correo, Estatura, Peso " +
                 "from Personas "+
                 "where cedula=@cedula";
 
