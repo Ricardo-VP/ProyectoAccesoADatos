@@ -159,7 +159,7 @@
             this.cmbSex.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSex.FormattingEnabled = true;
             this.cmbSex.Items.AddRange(new object[] {
-            "M\t",
+            "M",
             "F"});
             this.cmbSex.Location = new System.Drawing.Point(327, 251);
             this.cmbSex.Name = "cmbSex";

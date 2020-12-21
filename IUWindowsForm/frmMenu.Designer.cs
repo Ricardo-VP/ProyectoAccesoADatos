@@ -34,13 +34,14 @@
             this.btnFrmListadoMaterias = new System.Windows.Forms.Button();
             this.btnCerrarForm = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnFrmAEstudiantes
             // 
             this.btnFrmAEstudiantes.BackColor = System.Drawing.Color.YellowGreen;
             this.btnFrmAEstudiantes.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFrmAEstudiantes.Location = new System.Drawing.Point(114, 143);
+            this.btnFrmAEstudiantes.Location = new System.Drawing.Point(114, 117);
             this.btnFrmAEstudiantes.Name = "btnFrmAEstudiantes";
             this.btnFrmAEstudiantes.Size = new System.Drawing.Size(228, 48);
             this.btnFrmAEstudiantes.TabIndex = 19;
@@ -52,7 +53,7 @@
             // 
             this.btnFrmAgregarMaterias.BackColor = System.Drawing.Color.Yellow;
             this.btnFrmAgregarMaterias.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFrmAgregarMaterias.Location = new System.Drawing.Point(114, 301);
+            this.btnFrmAgregarMaterias.Location = new System.Drawing.Point(114, 331);
             this.btnFrmAgregarMaterias.Name = "btnFrmAgregarMaterias";
             this.btnFrmAgregarMaterias.Size = new System.Drawing.Size(228, 48);
             this.btnFrmAgregarMaterias.TabIndex = 20;
@@ -64,7 +65,7 @@
             // 
             this.btnFrmListadoEstudiantes.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnFrmListadoEstudiantes.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFrmListadoEstudiantes.Location = new System.Drawing.Point(114, 197);
+            this.btnFrmListadoEstudiantes.Location = new System.Drawing.Point(114, 171);
             this.btnFrmListadoEstudiantes.Name = "btnFrmListadoEstudiantes";
             this.btnFrmListadoEstudiantes.Size = new System.Drawing.Size(228, 48);
             this.btnFrmListadoEstudiantes.TabIndex = 21;
@@ -76,7 +77,7 @@
             // 
             this.btnFrmListadoMaterias.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnFrmListadoMaterias.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFrmListadoMaterias.Location = new System.Drawing.Point(114, 355);
+            this.btnFrmListadoMaterias.Location = new System.Drawing.Point(114, 385);
             this.btnFrmListadoMaterias.Name = "btnFrmListadoMaterias";
             this.btnFrmListadoMaterias.Size = new System.Drawing.Size(228, 48);
             this.btnFrmListadoMaterias.TabIndex = 22;
@@ -88,7 +89,7 @@
             // 
             this.btnCerrarForm.BackColor = System.Drawing.Color.LightCoral;
             this.btnCerrarForm.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarForm.Location = new System.Drawing.Point(114, 507);
+            this.btnCerrarForm.Location = new System.Drawing.Point(114, 528);
             this.btnCerrarForm.Name = "btnCerrarForm";
             this.btnCerrarForm.Size = new System.Drawing.Size(228, 48);
             this.btnCerrarForm.TabIndex = 23;
@@ -106,11 +107,24 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Menu de navegación";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button1.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(114, 225);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(228, 48);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Buscar estudiantes";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(495, 600);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCerrarForm);
             this.Controls.Add(this.btnFrmListadoMaterias);
@@ -132,5 +146,6 @@
         private System.Windows.Forms.Button btnFrmListadoMaterias;
         private System.Windows.Forms.Button btnCerrarForm;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
