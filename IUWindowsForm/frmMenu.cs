@@ -51,5 +51,11 @@ namespace IUWindowsForm
             frmBuscar m = new frmBuscar();
             m.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmBuscarMaterias m = new frmBuscarMaterias();
+            m.ShowDialog();
+        }
     }
 }

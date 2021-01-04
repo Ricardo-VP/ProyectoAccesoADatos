@@ -67,5 +67,65 @@ namespace IUWindowsForm
         {
 
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            if (txtCedula.Text.Length == 0)
+            {
+                MessageBox.Show("No hay cédula seleccionada...");
+                return;
+            }
+            CapaDatos.Persona persona = new CapaDatos.Persona();
+            persona.Cedula = this.txtCedula.Text;
+            persona.Apellidos = this.txtApellidos.Text;
+            persona.Nombres = this.txtNombres.Text;
+            persona.Sexo = this.txtSexo.Text;
+            persona.Correo = this.txtCorreo.Text;
+            persona.Peso = decimal.Parse(this.txtEstatura.Text);
+            persona.Estatura = int.Parse(this.txtEstatura.Text);
+            persona.FechaNacimiento = dtpFechaNacimiento.Value;
+
+            int x = CapaDatos.PersonaDAO.actualizar(persona);
+
+            if (x > 0)
+            {
+                MessageBox.Show("Registro actualizado con éxito!");
+            }
+            else
+            {
+                MessageBox.Show("No se pudo actualizar el registro");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("¿Está seguro que desea eliminar?", "Confirme", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.No) 
+            {
+                return;
+            }
+
+            int x = CapaDatos.PersonaDAO.eliminar(this.txtCedula.Text);
+            if (x > 0)
+            {
+                this.encerar();
+                this.cargarComboEstudiantes();
+                MessageBox.Show("Registro eliminado con éxito!");
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido eliminar el registro!");
+            }
+        }
+        private void encerar()
+        {
+            this.txtCedula.Text = "";
+            this.txtApellidos.Text = "";
+            this.txtNombres.Text = "";
+            this.txtCorreo.Text = "";
+            this.txtEstatura.Text = "0";
+            this.txtPeso.Text = "0";
+            this.txtSexo.Text = "";
+        }
     }
 }

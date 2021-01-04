@@ -56,6 +56,71 @@ namespace CapaDatos
             return x;
         }
 
+        public static int actualizar(Persona persona)
+        {
+            //Agregar estudiantes en la BDD
+            //1. Establecer conexión con el servidor de BDD
+
+            //objeto tipo Conexión para conectarse al servidor
+            SqlConnection conexion = new SqlConnection(cadenaConexion);
+
+            //2. Definir operación sobre la bdd (actualizar)
+            string sql = "update Personas set apellidos=@apellidos, nombres=@nombres, sexo=@sexo, fechaNacimiento=@fechaNacimiento"+
+                ", correo=@correo, estatura=@estatura, peso=@peso" +
+                " where cedula=@cedula";
+
+            //Definir un objeto de la clase Command para ejecutar la sentencia sql que hemos creado
+            SqlCommand comando = new SqlCommand(sql, conexion);
+
+            //Definir parámetros
+            comando.CommandType = CommandType.Text;
+            comando.Parameters.AddWithValue("@cedula", persona.Cedula);
+            comando.Parameters.AddWithValue("@apellidos", persona.Apellidos);
+            comando.Parameters.AddWithValue("@nombres", persona.Nombres);
+            comando.Parameters.AddWithValue("@sexo", persona.Sexo);
+            comando.Parameters.AddWithValue("@fechaNacimiento", persona.FechaNacimiento);
+            comando.Parameters.AddWithValue("@correo", persona.Correo);
+            comando.Parameters.AddWithValue("@estatura", persona.Estatura);
+            comando.Parameters.AddWithValue("@peso", persona.Peso);
+
+            //3. Abrir la conexión y ejecutar el comando
+            conexion.Open();
+            int x = comando.ExecuteNonQuery();
+            //4. Cerrar la conexión
+            conexion.Close();
+
+            return x;
+        }
+
+        public static int eliminar(String cedula)
+        {
+            //Agregar estudiantes en la BDD
+            //1. Establecer conexión con el servidor de BDD
+
+            //objeto tipo Conexión para conectarse al servidor
+            SqlConnection conexion = new SqlConnection(cadenaConexion);
+
+            //2. Definir operación sobre la bdd (actualizar)
+            string sql = "delete from Personas" +
+                " where cedula=@cedula";
+
+            //Definir un objeto de la clase Command para ejecutar la sentencia sql que hemos creado
+            SqlCommand comando = new SqlCommand(sql, conexion);
+
+            //Definir parámetros
+            comando.CommandType = CommandType.Text;
+            comando.Parameters.AddWithValue("@cedula", cedula);
+
+            //3. Abrir la conexión y ejecutar el comando
+            conexion.Open();
+            int x = comando.ExecuteNonQuery();
+            //4. Cerrar la conexión
+            conexion.Close();
+
+            return x;
+        }
+
+
         public static DataTable GetAll()
 
         {
@@ -86,7 +151,7 @@ namespace CapaDatos
 
             //sql (lenguaje estructurado de consultas)
 
-            string sql = "select cedula as Cédula, upper(apellidos +' '+ nombres) as Estudiante, case when sexo='M' then 'Masculino' else 'Femenino' end as Sexo, fechaNacimiento as [Fecha Nac.], Correo, Estatura, Peso" +
+            string sql = "select cedula as Cédula, upper(apellidos +' '+ nombres) as Estudiante, Sexo, fechaNacimiento as [Fecha Nac.], Correo, Estatura, Peso" +
 
                 " from Personas order by apellidos, nombres";
 
@@ -138,7 +203,7 @@ namespace CapaDatos
 
             //sql (lenguaje estructurado de consultas)
 
-            string sql = "select cedula, apellidos, nombres, case when sexo='M' then 'Masculino' else 'Femenino' end as Sexo, fechaNacimiento, Correo, Estatura, Peso " +
+            string sql = "select cedula, apellidos, nombres, Sexo, fechaNacimiento, Correo, Estatura, Peso " +
                 "from Personas "+
                 "where cedula=@cedula";
 
@@ -159,6 +224,14 @@ namespace CapaDatos
             ad.Fill(dt);//desde el adaptador paso los datos al datatable
 
             Persona p = new Persona();
+            //Encerar valores
+            p.Cedula = "";
+            p.Apellidos = "";
+            p.Nombres = "";
+            p.Sexo = "";
+            p.Estatura = 0;
+            p.Peso = 0;
+            p.Correo = "";
             //recorrer el datatable
             foreach(DataRow fila in dt.Rows)
             {
