@@ -26,5 +26,58 @@ namespace IUWindowsForm
         {
             this.Close();
         }
+
+        private void frmListadoMaterias_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cargarGrid()
+        {
+            this.dataGridViewMaterias.Refresh();
+            this.dataGridViewMaterias.DataSource = CapaDatos.MateriaDAO.GetAll();
+        }
+
+        private void dataGridViewMaterias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Verificar si se hizo click en el link eliminar 
+            if (this.dataGridViewMaterias.Columns[e.ColumnIndex].Name == "linkEliminar")
+            {
+                //Recuperar cédula de la fila actual
+                int fila = e.RowIndex;
+                String codMat = dataGridViewMaterias["Código", fila].Value.ToString();
+                String materia = dataGridViewMaterias["Materia", fila].Value.ToString();
+
+                DialogResult dr = MessageBox.Show("¿Está segur@ que desea eliminar la materia " + materia + " ?", "Confirme", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (dr == DialogResult.No)
+                {
+                    return;
+                }
+
+                int x = CapaDatos.MateriaDAO.eliminar(codMat);
+
+                if (x > 0)
+                {
+                    this.cargarGrid();
+                    MessageBox.Show("Registro borrado con éxito!");
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo borrar el registro..");
+                }
+
+            }
+            else if (this.dataGridViewMaterias.Columns[e.ColumnIndex].Name == "linkActualizar")
+            {
+                int fila = e.RowIndex;
+                String Materia = dataGridViewMaterias["Materia", fila].Value.ToString();
+                frmActualizarMateria frm1 = new frmActualizarMateria(Materia);
+                frm1.ShowDialog();
+                cargarGrid();
+            }
+        }
+
+
     }
 }

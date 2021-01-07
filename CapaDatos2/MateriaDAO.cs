@@ -150,7 +150,7 @@ namespace CapaDatos
 
             //sql (lenguaje estructurado de consultas)
 
-            string sql = "select codMat, nombreMateria, nivel, carrera" +
+            string sql = "select codMat as Código, nombreMateria as Materia, nivel as Nivel, carrera as Carrera" +
                 " from Materias";
 
                 

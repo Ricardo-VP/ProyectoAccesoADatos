@@ -52,6 +52,12 @@
     <Compile Include="frmActualizar.Designer.cs">
       <DependentUpon>frmActualizar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmActualizarMateria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmActualizarMateria.Designer.cs">
+      <DependentUpon>frmActualizarMateria.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAgregarEstudiante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmActualizar.resx">
       <DependentUpon>frmActualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmActualizarMateria.resx">
+      <DependentUpon>frmActualizarMateria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAgregarEstudiante.resx">
       <DependentUpon>frmAgregarEstudiante.cs</DependentUpon>

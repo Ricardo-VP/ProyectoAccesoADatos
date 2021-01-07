@@ -20,7 +20,7 @@ namespace IUWindowsForm
         {
             this.cmbCodigoMateria.DataSource = CapaDatos.MateriaDAO.GetAll();
             this.cmbCodigoMateria.DisplayMember = "materia";
-            this.cmbCodigoMateria.ValueMember = "nombreMateria";
+            this.cmbCodigoMateria.ValueMember = "Materia";
         }
 
         private void btnActualizarMateria_Click(object sender, EventArgs e)

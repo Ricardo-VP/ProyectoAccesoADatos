@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.dataGridViewMaterias = new System.Windows.Forms.DataGridView();
+            this.linkActualizar = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.linkEliminar = new System.Windows.Forms.DataGridViewLinkColumn();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMaterias)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +51,7 @@
             // btnMostrar
             // 
             this.btnMostrar.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrar.Location = new System.Drawing.Point(459, 40);
+            this.btnMostrar.Location = new System.Drawing.Point(573, 39);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(127, 47);
             this.btnMostrar.TabIndex = 2;
@@ -60,18 +62,40 @@
             // dataGridViewMaterias
             // 
             this.dataGridViewMaterias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMaterias.Location = new System.Drawing.Point(67, 109);
+            this.dataGridViewMaterias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.linkActualizar,
+            this.linkEliminar});
+            this.dataGridViewMaterias.Location = new System.Drawing.Point(53, 109);
             this.dataGridViewMaterias.Name = "dataGridViewMaterias";
             this.dataGridViewMaterias.RowHeadersWidth = 51;
             this.dataGridViewMaterias.RowTemplate.Height = 24;
-            this.dataGridViewMaterias.Size = new System.Drawing.Size(776, 389);
+            this.dataGridViewMaterias.Size = new System.Drawing.Size(1000, 389);
             this.dataGridViewMaterias.TabIndex = 3;
+            this.dataGridViewMaterias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMaterias_CellContentClick);
+            // 
+            // linkActualizar
+            // 
+            this.linkActualizar.HeaderText = "Acción";
+            this.linkActualizar.MinimumWidth = 6;
+            this.linkActualizar.Name = "linkActualizar";
+            this.linkActualizar.Text = "Actualizar";
+            this.linkActualizar.UseColumnTextForLinkValue = true;
+            this.linkActualizar.Width = 125;
+            // 
+            // linkEliminar
+            // 
+            this.linkEliminar.HeaderText = "Acción";
+            this.linkEliminar.MinimumWidth = 6;
+            this.linkEliminar.Name = "linkEliminar";
+            this.linkEliminar.Text = "Eliminar";
+            this.linkEliminar.UseColumnTextForLinkValue = true;
+            this.linkEliminar.Width = 125;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LightCoral;
             this.button1.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(649, 40);
+            this.button1.Location = new System.Drawing.Point(747, 39);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(139, 48);
             this.button1.TabIndex = 22;
@@ -83,13 +107,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 521);
+            this.ClientSize = new System.Drawing.Size(1106, 521);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridViewMaterias);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.label1);
             this.Name = "frmListadoMaterias";
             this.Text = "Listado de materias";
+            this.Load += new System.EventHandler(this.frmListadoMaterias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMaterias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -102,5 +127,7 @@
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.DataGridView dataGridViewMaterias;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewLinkColumn linkActualizar;
+        private System.Windows.Forms.DataGridViewLinkColumn linkEliminar;
     }
 }
