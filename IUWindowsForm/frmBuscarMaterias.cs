@@ -20,7 +20,7 @@ namespace IUWindowsForm
         {
             this.cmbCodigoMateria.DataSource = CapaDatos.MateriaDAO.GetAll();
             this.cmbCodigoMateria.DisplayMember = "materia";
-            this.cmbCodigoMateria.ValueMember = "codMat";
+            this.cmbCodigoMateria.ValueMember = "nombreMateria";
         }
 
         private void btnActualizarMateria_Click(object sender, EventArgs e)
@@ -82,9 +82,9 @@ namespace IUWindowsForm
 
         private void btnBuscarMateria_Click(object sender, EventArgs e)
         {
-            string codMat = this.cmbCodigoMateria.SelectedValue.ToString();
+            string nombreMateria = this.cmbCodigoMateria.SelectedValue.ToString();
             CapaDatos.Materia m = new CapaDatos.Materia();
-            m = CapaDatos.MateriaDAO.GetMateria(codMat);
+            m = CapaDatos.MateriaDAO.GetMateria(nombreMateria);
 
             //cargar datos en los cuadros de texto
             this.txtCodMat.Text = m.CodMat;

@@ -171,7 +171,7 @@ namespace CapaDatos
 
         }
 
-        public static Materia GetMateria(String codMat)
+        public static Materia GetMateria(String nombreMateria)
 
         {
 
@@ -203,14 +203,14 @@ namespace CapaDatos
 
             string sql = "select codMat, nombreMateria, nivel, carrera " +
                 "from Materias " +
-                "where codMat=@codMat";
+                "where nombreMateria=@nombreMateria";
 
             //definir un adaptador de datos: es un puente que permite pasar los datos de la BDD hacia el datatable
 
             SqlDataAdapter ad = new SqlDataAdapter(sql, conexion);
 
             //pasar el parámetro
-            ad.SelectCommand.Parameters.AddWithValue("@codMat", codMat);
+            ad.SelectCommand.Parameters.AddWithValue("@nombreMateria", nombreMateria);
 
 
             //3. recuperamos los datos
