@@ -65,7 +65,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Cédula</rd:DefaultName>
@@ -136,7 +138,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Apellidos</rd:DefaultName>
@@ -207,7 +211,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Nombres</rd:DefaultName>
@@ -278,7 +284,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Sexo</rd:DefaultName>
@@ -350,7 +358,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>FechaNacimiento</rd:DefaultName>
@@ -433,7 +443,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Correo</rd:DefaultName>
@@ -504,7 +516,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Estatura</rd:DefaultName>
@@ -575,7 +589,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Peso</rd:DefaultName>
@@ -637,7 +653,7 @@
         <Top>1.18745cm</Top>
         <Left>7.64328cm</Left>
         <Height>4.8cm</Height>
-        <Width>10.45042cm</Width>
+        <Width>10.45041cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -705,9 +721,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
           <Top>0.90682cm</Top>
-          <Left>4.2866cm</Left>
+          <Left>4.1596cm</Left>
           <Height>1.28199cm</Height>
-          <Width>15.36517cm</Width>
+          <Width>15.49217cm</Width>
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
@@ -727,7 +743,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>3.73062cm</Height>
+      <Height>2.14312cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>

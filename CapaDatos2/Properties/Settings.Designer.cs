@@ -32,5 +32,15 @@ namespace CapaDatos2.Properties {
                 return ((string)(this["EstudiantesConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=PC;Initial Catalog=Materias;Integrated Security=True")]
+        public string MateriasConnectionString {
+            get {
+                return ((string)(this["MateriasConnectionString"]));
+            }
+        }
     }
 }

@@ -66,6 +66,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsEstudiantes.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ds\dsMaterias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMaterias.xsd</DependentUpon>
+    </Compile>
     <Compile Include="informes\frmEstudiante_seleccionar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +88,24 @@
     </Compile>
     <Compile Include="informes\frmInformeEstudiantes.Designer.cs">
       <DependentUpon>frmInformeEstudiantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="informes\frmInformeMateriaMostrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="informes\frmInformeMateriaMostrar.Designer.cs">
+      <DependentUpon>frmInformeMateriaMostrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="informes\frmInformeMaterias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="informes\frmInformeMaterias.Designer.cs">
+      <DependentUpon>frmInformeMaterias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="informes\frmMateria_seleccionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="informes\frmMateria_seleccionar.Designer.cs">
+      <DependentUpon>frmMateria_seleccionar.cs</DependentUpon>
     </Compile>
     <Compile Include="Materia.cs" />
     <Compile Include="MateriaDAO.cs" />
@@ -124,6 +147,17 @@
     <None Include="ds\dsEstudiantes.xss">
       <DependentUpon>dsEstudiantes.xsd</DependentUpon>
     </None>
+    <None Include="ds\dsMaterias.xsc">
+      <DependentUpon>dsMaterias.xsd</DependentUpon>
+    </None>
+    <None Include="ds\dsMaterias.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMaterias.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds\dsMaterias.xss">
+      <DependentUpon>dsMaterias.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -140,8 +174,19 @@
     <EmbeddedResource Include="informes\frmInformeEstudiantes.resx">
       <DependentUpon>frmInformeEstudiantes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="informes\frmInformeMateriaMostrar.resx">
+      <DependentUpon>frmInformeMateriaMostrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="informes\frmInformeMaterias.resx">
+      <DependentUpon>frmInformeMaterias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="informes\frmMateria_seleccionar.resx">
+      <DependentUpon>frmMateria_seleccionar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="informes\rptEstudiantexCedula.rdlc" />
     <EmbeddedResource Include="informes\rptEstudiantes.rdlc" />
+    <EmbeddedResource Include="informes\rptMaterias.rdlc" />
+    <EmbeddedResource Include="informes\rptMateriaxCodigo.rdlc" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
