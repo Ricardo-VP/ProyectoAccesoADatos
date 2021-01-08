@@ -36,13 +36,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnFrmAEstudiantes
             // 
             this.btnFrmAEstudiantes.BackColor = System.Drawing.Color.YellowGreen;
             this.btnFrmAEstudiantes.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFrmAEstudiantes.Location = new System.Drawing.Point(86, 95);
+            this.btnFrmAEstudiantes.Location = new System.Drawing.Point(86, 63);
             this.btnFrmAEstudiantes.Margin = new System.Windows.Forms.Padding(2);
             this.btnFrmAEstudiantes.Name = "btnFrmAEstudiantes";
             this.btnFrmAEstudiantes.Size = new System.Drawing.Size(171, 39);
@@ -55,7 +57,7 @@
             // 
             this.btnFrmAgregarMaterias.BackColor = System.Drawing.Color.Yellow;
             this.btnFrmAgregarMaterias.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFrmAgregarMaterias.Location = new System.Drawing.Point(86, 269);
+            this.btnFrmAgregarMaterias.Location = new System.Drawing.Point(86, 302);
             this.btnFrmAgregarMaterias.Margin = new System.Windows.Forms.Padding(2);
             this.btnFrmAgregarMaterias.Name = "btnFrmAgregarMaterias";
             this.btnFrmAgregarMaterias.Size = new System.Drawing.Size(171, 39);
@@ -68,7 +70,7 @@
             // 
             this.btnFrmListadoEstudiantes.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnFrmListadoEstudiantes.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFrmListadoEstudiantes.Location = new System.Drawing.Point(86, 139);
+            this.btnFrmListadoEstudiantes.Location = new System.Drawing.Point(86, 106);
             this.btnFrmListadoEstudiantes.Margin = new System.Windows.Forms.Padding(2);
             this.btnFrmListadoEstudiantes.Name = "btnFrmListadoEstudiantes";
             this.btnFrmListadoEstudiantes.Size = new System.Drawing.Size(171, 39);
@@ -81,7 +83,7 @@
             // 
             this.btnFrmListadoMaterias.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnFrmListadoMaterias.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFrmListadoMaterias.Location = new System.Drawing.Point(86, 313);
+            this.btnFrmListadoMaterias.Location = new System.Drawing.Point(86, 345);
             this.btnFrmListadoMaterias.Margin = new System.Windows.Forms.Padding(2);
             this.btnFrmListadoMaterias.Name = "btnFrmListadoMaterias";
             this.btnFrmListadoMaterias.Size = new System.Drawing.Size(171, 39);
@@ -94,7 +96,7 @@
             // 
             this.btnCerrarForm.BackColor = System.Drawing.Color.LightCoral;
             this.btnCerrarForm.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarForm.Location = new System.Drawing.Point(86, 429);
+            this.btnCerrarForm.Location = new System.Drawing.Point(86, 462);
             this.btnCerrarForm.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrarForm.Name = "btnCerrarForm";
             this.btnCerrarForm.Size = new System.Drawing.Size(171, 39);
@@ -107,7 +109,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 39);
+            this.label1.Location = new System.Drawing.Point(11, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(330, 37);
@@ -118,7 +120,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button1.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(86, 183);
+            this.button1.Location = new System.Drawing.Point(86, 149);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(171, 39);
@@ -131,7 +133,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button2.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(86, 356);
+            this.button2.Location = new System.Drawing.Point(86, 388);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(171, 39);
@@ -140,11 +142,39 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button3.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(86, 192);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(171, 39);
+            this.button3.TabIndex = 27;
+            this.button3.Text = "Informes generales";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button4.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(86, 235);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(171, 39);
+            this.button4.TabIndex = 28;
+            this.button4.Text = "Informes personales";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 488);
+            this.ClientSize = new System.Drawing.Size(352, 512);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -171,5 +201,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

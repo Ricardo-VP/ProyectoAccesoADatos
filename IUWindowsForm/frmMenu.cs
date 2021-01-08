@@ -57,5 +57,17 @@ namespace IUWindowsForm
             frmBuscarMaterias m = new frmBuscarMaterias();
             m.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CapaDatos2.informes.frmInformeEstudiantes m = new CapaDatos2.informes.frmInformeEstudiantes();
+            m.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            CapaDatos2.informes.frmEstudiante_seleccionar m = new CapaDatos2.informes.frmEstudiante_seleccionar();
+            m.ShowDialog();
+        }
     }
 }
